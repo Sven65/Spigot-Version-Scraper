@@ -1,0 +1,12 @@
+[package]
+name = "spigot_version_scraper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.42"
+dotenvy = "0.15.7"
+regex = "1.12.2"
+reqwest = { version = "0.12.24", features = ["blocking"] }
+scraper = "0.24.0"
+sqlite = "0.37.0"
