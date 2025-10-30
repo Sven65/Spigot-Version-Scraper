@@ -63,9 +63,10 @@ fn main() -> sqlite::Result<()>  {
     dotenv().ok();
 
     check_env_var("DISCORD_WEBHOOK_URL");
+    check_env_var("DATABASE_PATH");
 
 
-    let db = Database::new("forum.db")?;
+    let db = Database::new(&env::var("DATABASE_PATH").unwrap())?;
 
 	println!("Checking for new posts.");
 
